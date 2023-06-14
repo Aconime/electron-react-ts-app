@@ -1,0 +1,1 @@
+# Electron App with React & Typescript.

@@ -1,0 +1,77 @@
+{
+  "name": "app-name",
+  "displayName": "DISPLAY_NAME_HERE",
+  "version": "1.0.0",
+  "description": "APP_DESCRIPTION_HERE",
+  "main": "main-dev.js",
+  "scripts": {
+    "watch": "webpack --config webpack.common.js --watch",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "REPO_URL_HERE"
+  },
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "com.app.name",
+    "files": [
+      "main-prod.js",
+      "public/",
+      "config/"
+    ],
+    "productName": "PRODUCT_NAME_HERE",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "ICON_PATH_HERE"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "INSTALLER_ICON_PATH_HERE",
+      "uninstallerIcon": "UNINSTALLER_ICON_PATH_HERE",
+      "uninstallDisplayName": "UNINSTALLER_NAME_HERE",
+      "allowToChangeInstallationDirectory": false
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "author": "AUTHOR_NAME_HERE",
+  "license": "MIT",
+  "bugs": {
+    "url": "HTTPS:YOUR_REPO_ISSUES_URL_HERE"
+  },
+  "homepage": "YOUR_REPO_README_URL",
+  "dependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "electron-updater": "^5.3.0",
+    "node-notifier": "^10.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "@types/electron": "^1.6.10",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "electron": "^24.2.0",
+    "electron-builder": "^24.4.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
